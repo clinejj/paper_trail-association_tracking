@@ -3,7 +3,7 @@
 module PaperTrailAssociationTracking
   class Railtie < ::Rails::Railtie
 
-    initializer "paper_trail_association_tracking", before: "paper_trail" do
+    initializer "paper_trail_association_tracking", after: "paper_trail" do
       ActiveSupport.on_load(:active_record) do
         require "paper_trail_association_tracking/frameworks/active_record"
       end
