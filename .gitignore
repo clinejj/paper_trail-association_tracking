@@ -1,6 +1,6 @@
 *.gem
 *.sqlite3-journal
-.DS_Store
+**/.DS_Store
 .bundle
 .byebug_history
 .idea
@@ -12,6 +12,7 @@
 .rvmrc
 .tags
 .tags_sorted_by_file
+.vscode/*
 Gemfile.lock
 NOTES
 coverage
@@ -26,4 +27,3 @@ spec/dummy_app/tmp/*
 test/debug.log
 test/paper_trail_plugin.sqlite3.db
 vendor/*
-.DS_Store
