@@ -9,11 +9,6 @@ require "paper_trail_association_tracking/request"
 require "paper_trail_association_tracking/paper_trail"
 require "paper_trail_association_tracking/version_concern"
 
-if defined?(Rails)
-  require "paper_trail/frameworks/active_record"
-  require "paper_trail_association_tracking/frameworks/rails"
-end
-
 module PaperTrailAssociationTracking
   def self.version
     VERSION
@@ -52,8 +47,10 @@ module PaperTrail
       prepend ::PaperTrailAssociationTracking::Request::ClassMethods
     end
   end
+end
 
-  module VersionConcern
-    include ::PaperTrailAssociationTracking::VersionConcern
-  end
+if defined?(Rails)
+  require "paper_trail_association_tracking/frameworks/rails"
+else
+  require "paper_trail/frameworks/active_record"
 end

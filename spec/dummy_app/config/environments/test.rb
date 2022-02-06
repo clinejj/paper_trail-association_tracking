@@ -45,4 +45,8 @@ Dummy::Application.configure do
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
+
+  # Use new connection handling introduced in Rails 6.1
+  # See https://guides.rubyonrails.org/6_1_release_notes.html#per-database-connection-switching
+  config.active_record.legacy_connection_handling = false
 end
