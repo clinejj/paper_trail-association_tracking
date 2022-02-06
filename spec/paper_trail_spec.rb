@@ -39,17 +39,17 @@ RSpec.describe PaperTrail do
     end
   end
 
-  # context "`with_versioning` block at class level" do
-  #   it { expect(described_class).not_to be_enabled }
+  context "`with_versioning` block at class level" do
+    it { expect(described_class).not_to be_enabled }
 
-  #   with_versioning do
-  #     it "has versioning on by default" do
-  #       expect(described_class).to be_enabled
-  #     end
-  #   end
-  #   it "does not leak the `enabled?` state into successive tests" do
-  #     expect(described_class).not_to be_enabled
-  #   end
-  # end
+    with_versioning do
+      it "has versioning on by default" do
+        expect(described_class).to be_enabled
+      end
+    end
+    it "does not leak the `enabled?` state into successive tests" do
+      expect(described_class).not_to be_enabled
+    end
+  end
 
 end

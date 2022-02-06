@@ -44,6 +44,7 @@ end
 require "active_record/railtie"
 
 require "rspec/rails"
+require "paper_trail/frameworks/rspec"
 require "ffaker"
 require "timecop"
 
