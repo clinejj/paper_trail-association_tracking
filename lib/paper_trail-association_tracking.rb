@@ -7,7 +7,6 @@ require "paper_trail_association_tracking/reifier"
 require "paper_trail_association_tracking/record_trail"
 require "paper_trail_association_tracking/request"
 require "paper_trail_association_tracking/paper_trail"
-require "paper_trail_association_tracking/version_concern"
 
 module PaperTrailAssociationTracking
   def self.version
